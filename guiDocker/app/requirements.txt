@@ -1,0 +1,6 @@
+Flask
+mysql-connector-python
+selenium
+monkeylearn
+pandas
+flask-cors

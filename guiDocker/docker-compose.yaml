@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  mysql-server:
+    image: mysql:8.0.19
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./db_content/all_data.csv:/docker-entrypoint-initdb.d/all_data.csv
+      - ./db_content/gpt2_content.csv:/docker-entrypoint-initdb.d/gpt2_content.csv
+      - ./db_content/company_content.csv:/docker-entrypoint-initdb.d/company_content.csv
+      - ./db_content/paraphrase_content.csv:/docker-entrypoint-initdb.d/paraphrase_content.csv 
+    ports:
+      - "3306:3306"
+   
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "8082:80"
+
+  app:
+    build: ./app
+    volumes:
+      - .:/app
+    restart: always
+    ports:
+      - 0.0.0.0:5000:5000
+    depends_on:
+      - mysql-server
+
+  gui:
+    build: ./gui
+    restart: always
+    expose:
+      - 80
+    ports:
+      - 0.0.0.0:8080:8080

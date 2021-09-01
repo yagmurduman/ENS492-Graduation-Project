@@ -1,0 +1,99 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brand-name {
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+
+.brand-name a:hover {
+    color: #fff !important;
+}
+
+.dot {
+    color: #e03a3c;
+}
+
+.btn-danger{
+    color: #fff;
+    border-color: #e03a3c;
+    background-color: #e03a3c;
+}
+
+.page-header {
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: rgba(2,0,36,1);
+}
+
+.more-info {
+    font-size: 1.25rem;
+    color: rgba(2,0,36,1);
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.carousel .carousel-item {
+    height: 500px;
+  }
+  
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+.carousel-item h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.navbar-nav > li{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+  /***** Footer *****/
+
+.footer-top { padding: 60px 0; background: #333; text-align: left; color: #aaa; }
+.footer-top h3 { padding-bottom: 10px; color: #fff; }
+
+.footer-about img.logo-footer { max-width: 74px; margin-top: 0; margin-bottom: 18px; }
+.footer-about p a { border: 0; }
+.footer-about p a:hover, .footer-about p a:focus { border: 0; }
+
+.footer-contact p { word-wrap: break-word; }
+.footer-contact i { padding-right: 10px; font-size: 18px; color: #666; }
+.footer-contact p a { border: 0; }
+.footer-contact p a:hover, .footer-contact p a:focus { border: 0; }
+
+.footer-links a { color: #aaa; border: 0; }
+.footer-links a:hover, .footer-links a:focus { color: #fff; }
+
+.footer-bottom { padding: 15px 0 17px 0; background: #444; text-align: left; color: #aaa; }
+
+.footer-social { padding-top: 3px; text-align: right; }
+.footer-social a { margin-left: 20px; color: #777; border: 0; }
+.footer-social a:hover, .footer-social a:focus { color: #79a05f; border: 0; }
+.footer-social i { font-size: 24px; vertical-align: middle; }
+
+.footer-copyright { padding-top: 5px; }
+.footer-copyright a { color: #fff; border: 0; }
+.footer-copyright a:hover, .footer-copyright a:focus { color: #aaa; border: 0; }
+
+
+
+
+
